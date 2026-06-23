@@ -137,7 +137,7 @@ dark-theme graphic with the styled candlestick chart, a bold bias badge, the key
 levels, conviction, and the current price. Use the bundled `scripts/card.py`:
 
 ```bash
-python scripts/card.py --csv d1.csv --symbol EURUSD --timeframe "D1 · Dnevni bias" \
+python scripts/card.py --csv d1.csv --symbol EURUSD --timeframe "D1 · Daily bias" \
   --bias bearish --conviction Medium --asof 23.06.2026 --price 1.1428 \
   --support 1.1416,1.1357 --resistance 1.1474,1.1565 \
   --handle "@yourhandle" --format square --out eurusd_card.png
@@ -148,8 +148,10 @@ card and the text agree. Card the timeframe that best represents the bias horizo
 (D1 for swing, H1 for an intraday/daily bias). `--format` is `square` (1080×1080,
 default — best for Instagram/X), `portrait` (1080×1350), or `wide` (1200×675).
 `--handle` is optional (a watermark for the poster). The card always carries an
-"Analiza, nije finansijski savjet" footer. If a setup was requested, also pass
+"Analysis - not financial advice" footer. If a setup was requested, also pass
 `--direction/--entry/--stop/--target` to draw those levels on the card.
+
+Render **all text on the card in English** (symbol, badge, labels, footer) regardless of the report language, so the graphic is shareable to a global audience — pass an English `--timeframe` label (e.g. "D1 · Daily bias"). 
 
 Save the PNG alongside the report and present it to the user — the card is the
 headline visual, not an extra.
@@ -202,6 +204,22 @@ R:R [ratio] · Size [lots] at [risk%] of [balance]]
 
 Adapt sensibly to scope: a quick "is gold bullish?" still gets a grounded bias, a
 chart, and the levels that matter — just don't bloat every section.
+
+## Social caption (always, next to the card)
+
+Right after the card, output a short, ready-to-post **caption** — the text the user
+pastes alongside the image. Keep it skimmable: 2–4 short lines, plain and punchy, no
+jargon dump (the detail lives in the report, not the caption). Include the pair, the
+bias + conviction, the one level that matters, and the invalidation in a few words;
+add 2–4 relevant hashtags and a one-line "Not financial advice."
+
+**Example caption:**
+```
+EURUSD — Bearish (medium conviction). Trading below the key moving averages, momentum down.
+Watching 1.1416 support; a daily close back above 1.1474 flips the view.
+Not financial advice.
+#EURUSD #forex #trading #priceaction
+```
 
 ## Quality bar
 

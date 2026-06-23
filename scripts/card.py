@@ -236,7 +236,7 @@ def render(args):
                               transform=fig.transFigure))
     fig.text(0.07, 0.075, args.handle or "", color=MUTED, fontsize=13, ha="left", va="center",
              fontweight="bold")
-    fig.text(0.93, 0.075, "Analiza, nije finansijski savjet", color=MUTED, fontsize=11,
+    fig.text(0.93, 0.075, "Analysis - not financial advice", color=MUTED, fontsize=11,
              ha="right", va="center", style="italic")
 
     fig.savefig(args.out, facecolor=BG)
