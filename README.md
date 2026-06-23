@@ -55,6 +55,19 @@ Copy the `forex-forecasting/` skill folder (`SKILL.md` + `scripts/`) into your C
 
 ---
 
+## Install with Claude
+
+Paste this repo's link into Claude (Cowork) and say:
+
+> *"Download the forex-forecasting.skill from this repo and install it."*
+
+Claude fetches the `.skill` file and shows a **"Save skill"** button — click it to install.
+Then make sure the **MetaTrader 5 connector** is connected and ask, e.g. *"daily bias for EURUSD"*.
+
+> Note: installing a skill always requires your one-click confirmation — Claude cannot install it silently.
+
+---
+
 ## Usage
 
 Just ask, in any language:
