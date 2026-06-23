@@ -166,6 +166,25 @@ python scripts/chart.py --csv d1.csv,h4.csv,h1.csv --timeframe D1,H4,H1 \
 # setup overlay: --direction short --entry 1.327 --stop 1.3305 --target 1.3185,1.3163
 ```
 
+### 7. Log the forecast (always)
+
+So the calls can be reviewed for accuracy later, archive every forecast. After the
+card is generated, run `scripts/log_forecast.py` — it copies the card into a
+`forecasts/` folder (in the user's working directory) as `YYYY-MM-DD_SYMBOL_bias.png`
+and appends a row to `forecasts/forecast_log.csv` with the price, bias, conviction,
+levels, and invalidation:
+
+```bash
+python scripts/log_forecast.py --dir forecasts --symbol EURUSD --timeframe D1 \
+  --price 1.14146 --bias bearish --conviction medium \
+  --support "1.1409;1.1357" --resistance "1.1416;1.1450;1.1474" \
+  --invalidation "daily close above 1.1416" --image eurusd_card.png
+```
+
+Use the same numbers you put on the card so the log and the graphic agree. The
+`outcome`/`checked_on`/`notes` columns are left blank — they get filled in later
+when the forecast is reviewed against what price actually did.
+
 ## Output format
 
 Write the report in the **language of the user's request** (if they wrote in
