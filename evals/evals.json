@@ -1,0 +1,33 @@
+{
+  "skill_name": "forex-forecasting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Daj mi forecast za EURUSD za sljedećih nekoliko dana, razmišljam o ulasku u poziciju.",
+      "expected_output": "Strukturiran forecast: bias + conviction, trenutna cijena/spread, tehnička slika kroz D1/H4/H1, ključni nivoi podrške/otpora, fundamentalni kontekst (predstojeći događaji), bar jedan konkretan setup (ulaz/stop/target/RR) i invalidacija. Na bosanskom.",
+      "files": [],
+      "expectations": []
+    },
+    {
+      "id": 2,
+      "prompt": "Je li zlato trenutno bullish ili bearish? Koji su ključni nivoi koje da pratim?",
+      "expected_output": "Mapira 'zlato' na XAUUSD, povlači žive podatke, daje jasan bias sa obrazloženjem i navodi konkretne nivoe podrške i otpora oko trenutne cijene. Sažeto ali utemeljeno na podacima.",
+      "files": [],
+      "expectations": []
+    },
+    {
+      "id": 3,
+      "prompt": "Hoću short setup na GBPUSD sa rizikom od 1% računa. Daj mi ulaz, stop, take-profit i koliko lota.",
+      "expected_output": "Povlači account info za stanje, predlaže short setup sa ulazom, stopom, targetom, izračunatim R:R i veličinom pozicije u lotovima na osnovu 1% rizika. NE izvršava nalog. Uključuje invalidaciju i napomenu da korisnik sam izvršava.",
+      "files": [],
+      "expectations": []
+    },
+    {
+      "id": 4,
+      "prompt": "Daj mi dnevni bias za USDJPY.",
+      "expected_output": "Kratak, jasan dnevni (intraday) bias za USDJPY utemeljen na živim podacima — smjer za današnji dan, ključni intraday nivoi, i šta bi promijenilo bias. Sažeto, fokus na današnju sesiju.",
+      "files": [],
+      "expectations": []
+    }
+  ]
+}

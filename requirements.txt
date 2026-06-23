@@ -1,0 +1,2 @@
+# Python dependencies for the chart/card scripts
+matplotlib>=3.5

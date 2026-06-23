@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated runtime output (charts/cards/reports the skill makes at run time)
+*_card.png
+*_chart*.png
+*_report.md
+/tmp_*
+
+# ...but keep the committed example images
+!examples/
+!examples/*.png
+
+# OS
+.DS_Store
+Thumbs.db
